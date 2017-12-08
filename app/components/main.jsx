@@ -4,9 +4,10 @@ var Nav = require('nav');
 var Main = (props) => {
   return (
     <div>
+      <Nav/>
+
       <div>
         <div>
-          <Nav/>
           {props.children}
         </div>
       </div>

@@ -24,6 +24,8 @@ module.exports = {
         alias: {
             main: 'app/components/main.jsx',
             nav: 'app/components/nav.jsx',
+            timer: 'app/components/timer.jsx',
+            countdown: 'app/components/countdown.jsx',
             applicationStyles: 'app/styles/app.scss'
         },
         extensions: ['', '.js', '.jsx']// array of file types to process

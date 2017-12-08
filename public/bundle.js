@@ -106,6 +106,8 @@
 	    hashHistory = _require.hashHistory;
 
 	var Main = __webpack_require__(229);
+	var Timer = __webpack_require__(237);
+	var Countdown = __webpack_require__(238);
 
 	// Load foundation
 	__webpack_require__(231);
@@ -118,7 +120,12 @@
 	ReactDOM.render(React.createElement(
 	    Router,
 	    { history: hashHistory },
-	    React.createElement(Route, { path: '/', component: Main })
+	    React.createElement(
+	        Route,
+	        { path: '/', component: Main },
+	        React.createElement(IndexRoute, { component: Timer }),
+	        React.createElement(Route, { path: 'countdown', component: Countdown })
+	    )
 	), document.getElementById('app'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
@@ -25491,13 +25498,13 @@
 	  return React.createElement(
 	    'div',
 	    null,
+	    React.createElement(Nav, null),
 	    React.createElement(
 	      'div',
 	      null,
 	      React.createElement(
 	        'div',
 	        null,
-	        React.createElement(Nav, null),
 	        props.children
 	      )
 	    )
@@ -25537,8 +25544,8 @@
 	          'li',
 	          null,
 	          React.createElement(
-	            Link,
-	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	            IndexLink,
+	            { to: '/', activeClassName: 'active-link' },
 	            'Timer'
 	          )
 	        ),
@@ -25547,7 +25554,7 @@
 	          null,
 	          React.createElement(
 	            Link,
-	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	            { to: '/countdown', activeClassName: 'active-link' },
 	            'Countdown'
 	          )
 	        )
@@ -25959,10 +25966,54 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #333333; }\n\n.top-bar .menu-text {\n  color: white; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #333333; }\n\n.top-bar .menu-text {\n  color: white; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n", ""]);
 
 	// exports
 
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var Timer = function Timer(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'p',
+	      null,
+	      'Timer.jsx'
+	    )
+	  );
+	};
+
+	module.exports = Timer;
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var Countdown = function Countdown(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'p',
+	      null,
+	      'Countdown.jsx'
+	    )
+	  );
+	};
+
+	module.exports = Countdown;
 
 /***/ })
 /******/ ]);
