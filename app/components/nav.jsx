@@ -17,7 +17,7 @@ var Nav = (props) => {
       </div>
       <div className="top-bar-right">
         <ul className="menu">
-          <li className="menu-text">Created by <a href="" target="_blank">chtka</a></li>
+          <li className="menu-text">Created by <a href="https://github.com/chtka" target="_blank">chtka</a></li>
         </ul>
       </div>
 
